@@ -6,5 +6,6 @@ namespace eCommers.Core.ServiceContracts
     {
         Task<AuthenticationResponse?> Register(RegisterRequest registerRequest);
         Task<AuthenticationResponse?> Login(LoginRequest loginRequest);
+        Task<UserDTO?> GetUserByUserID(Guid userID);
     }
 }

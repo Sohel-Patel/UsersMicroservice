@@ -35,5 +35,15 @@ namespace eCommers.Infrastructure.Repositories
             ApplicationUser? user = await _context.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(query,parameters);
             return user;
         }
+
+        public async Task<ApplicationUser?> GetUserByUserId(Guid? userID)
+        {
+            string query = "SELECT * FROM public.\"Users\" WHERE \"UserId\" = @UserID";
+            var parameters = new { UserID = userID};
+
+            ApplicationUser? user = await _context.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(query,parameters);
+
+            return user;
+        }
     }
 }
