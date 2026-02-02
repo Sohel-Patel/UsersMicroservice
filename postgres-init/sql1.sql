@@ -1,1 +1,1 @@
-CREATE DATABASE eCommersUsers;
+CREATE DATABASE "eCommersUsers";

@@ -1,3 +1,4 @@
+\connect "eCommersUsers"
 -- Create the table if it does not exist
 CREATE TABLE public."Users"
 (

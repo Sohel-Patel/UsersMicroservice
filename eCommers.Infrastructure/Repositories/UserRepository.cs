@@ -30,7 +30,7 @@ namespace eCommers.Infrastructure.Repositories
 
         public async Task<ApplicationUser?> GetUserByEmailAndPassword(string? Email, string? Password)
         {
-            string query = "SELECT * FROM puBlic.\"Users\" WHERE \"Email\"=@Email AND \"Password\"=@Password";
+            string query = "SELECT * FROM public.\"Users\" WHERE \"Email\"=@Email AND \"Password\"=@Password";
             var parameters = new {Email = Email,Password = Password};
             ApplicationUser? user = await _context.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(query,parameters);
             return user;
