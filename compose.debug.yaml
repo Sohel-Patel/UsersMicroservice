@@ -63,7 +63,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ../eCommers.ProductsService/mysql-init:/docker-entrypoint-initdb.d:ro
+      - ../ProductService/mysql-init:/docker-entrypoint-initdb.d:ro
     networks:
       - products-mysql-network
   
